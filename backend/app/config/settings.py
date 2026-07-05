@@ -1,33 +1,7 @@
-# from pydantic_settings import BaseSettings, SettingsConfigDict
-
-
-# class Settings(BaseSettings):
-#     app_name: str
-#     app_version: str
-#     debug: bool
-
-#     log_level: str
-
-#     upload_dir: str
-
-#     max_file_size: int
-
-#     openai_api_key: str = ""
-
-#     gemini_api_key: str = ""
-
-#     chroma_db_path: str
-
-#     model_config = SettingsConfigDict(
-#         env_file=".env",
-#         extra="ignore"
-#     )
-
-
-# settings = Settings()
+# backend/app/config/settings.py
 
 from functools import lru_cache
-
+# from pydantic import BaseSettings
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -45,7 +19,8 @@ class Settings(BaseSettings):
 
     upload_dir: str = "uploads"
 
-    max_file_size: int = 10 * 1024 * 1024
+    # Already existed in constants.py
+    # max_file_size: int = 10 * 1024 * 1024
 
     openai_api_key: str = ""
 
